@@ -32,3 +32,21 @@ const (
 	CutByMinute                    // 按照分切割
 	CutBySecond                    // 按照秒切割
 )
+
+func (l Level) String() string {
+	switch l {
+	case DebugLevel:
+		return "DEBUG"
+	case InfoLevel:
+		return "INFO"
+	case WarnLevel:
+		return "WARN"
+	case ErrorLevel:
+		return "ERROR"
+	case FatalLevel:
+		return "FATAL"
+	case PanicLevel:
+		return "PANIC"
+	}
+	return "NONE"
+}
