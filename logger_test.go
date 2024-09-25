@@ -12,7 +12,11 @@ var logger = NewLogger(
 func TestNewLogger(t *testing.T) {
 	// logger.Print(InfoLevel, "hello GTI")
 
-	logger.Info("hello GTI")
+	logger.Info("Hello GTI")
 
-	logger.Warn("hello GTI")
+	logger.Warn("Hello GTI")
+}
+
+func TestLog(t *testing.T) {
+	Info("Hello GTI")
 }
