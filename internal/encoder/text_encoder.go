@@ -69,7 +69,7 @@ func (e *TextEncoder) EncodeEntry(ent zapcore.Entry, fields []zapcore.Field) (*b
 		default:
 			levelColor = blue
 		}
-		line.AppendString(fmt.Sprintf("\x1b[%dm%s", levelColor, levelText))
+		line.AppendString(fmt.Sprintf("\x1b[%dm%s ", levelColor, levelText))
 		// 添加格式化的时间戳
 		line.AppendString(fmt.Sprintf("\x1b[0m[%s]", ent.Time.Format(e.timeFormat)))
 	} else {
