@@ -77,7 +77,7 @@ func (e *TextEncoder) EncodeEntry(ent zapcore.Entry, fields []zapcore.Field) (*b
 		line.AppendString(fmt.Sprintf("[%s]", ent.Time.Format(e.timeFormat)))
 	}
 
-	// 添加用者信息、文件名和行号
+	// 添加调用者信息、文件名和行号
 	if ent.Caller.Defined {
 		if e.callerFullPath {
 			// 是否使用完整路径
